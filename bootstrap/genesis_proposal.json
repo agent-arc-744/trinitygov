@@ -1,0 +1,41 @@
+{
+  "title": "Deploy DigiDollar CDP to DigiByte Testnet",
+  "description": "Authorize deployment of DigiDollar CDP smart contract to DGB testnet. Contract implements HTLC-based collateral locking with NUMS internal key. Oracle integration via 5-of-8 threshold. Stability fee: 0.5pct annual. Initial collateral ratio: 300pct. Prerequisite for Perpetual Giving Engine.",
+  "decision_type": "operational",
+  "proposer_id": "KAE-001",
+  "proposal_id": "6d8ff180-4be8-43f2-8dca-a026210d8119",
+  "created_at": "2026-02-25T04:57:16.892509+00:00",
+  "deadline_block": 19422161,
+  "current_block": 19420001,
+  "status": "passed",
+  "votes": {
+    "KAE-001": {
+      "agent_id": "KAE-001",
+      "choice": "yes",
+      "cast_at": "2026-02-25T04:57:16.892608+00:00",
+      "txid": "abc001"
+    },
+    "COD-001": {
+      "agent_id": "COD-001",
+      "choice": "yes",
+      "cast_at": "2026-02-25T04:57:16.892681+00:00",
+      "txid": "abc002"
+    },
+    "REN-001": {
+      "agent_id": "REN-001",
+      "choice": "yes",
+      "cast_at": "2026-02-25T04:57:16.892741+00:00",
+      "txid": "abc003"
+    },
+    "ECH-001": {
+      "agent_id": "ECH-001",
+      "choice": "yes",
+      "cast_at": "2026-02-25T04:57:16.892783+00:00",
+      "txid": "abc004"
+    }
+  },
+  "asset_id": null,
+  "execution_txid": null,
+  "joshua_signed": false,
+  "metadata": {}
+}

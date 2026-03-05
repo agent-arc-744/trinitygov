@@ -1,0 +1,367 @@
+{
+  "entries": [
+    {
+      "action_type": "registry_genesis",
+      "actor_id": "kael",
+      "subject_id": "trinity-registry",
+      "description": "Genesis: registered agents KAE-001, COD-001, REN-001, ECH-001",
+      "block_height": 0,
+      "txid": null,
+      "entry_id": "9356ab8e-bf03-4978-aae6-1b05325e7ec5",
+      "created_at": "2026-02-25T04:57:16.891950+00:00",
+      "metadata": {
+        "agent_count": "4"
+      },
+      "content_hash": "d24a3d9acd6bd509e5ba38e114e83177775c778ef4e6aeb2a92f5421af36964b"
+    },
+    {
+      "action_type": "identity_issued",
+      "actor_id": "joshua",
+      "subject_id": "KAE-001",
+      "description": "Identity token issued for KAE-001 | asset=TRINITY-KAE-001-IDENTITY",
+      "block_height": 19420000,
+      "txid": "abababababababababababababababab-kae001",
+      "entry_id": "e60cfeff-1e7b-46bc-901d-8d8122cea91a",
+      "created_at": "2026-02-25T04:57:16.892042+00:00",
+      "metadata": {
+        "asset_id": "TRINITY-KAE-001-IDENTITY"
+      },
+      "content_hash": "e14cf78fdab3bf39ca69d1ed59b6996aa99c4d8c053df12d26abf9a0e68ab8b4"
+    },
+    {
+      "action_type": "capability_granted",
+      "actor_id": "joshua",
+      "subject_id": "KAE-001",
+      "description": "joshua granted CODE to KAE-001",
+      "block_height": 0,
+      "txid": null,
+      "entry_id": "57ca88b8-fd79-44ba-b206-d172c1821b7d",
+      "created_at": "2026-02-25T04:57:16.892068+00:00",
+      "metadata": {
+        "capability_id": "CODE"
+      },
+      "content_hash": "1e089662d481a8edc95616a97182930f652294612bd1c474bad76b8b207135a1"
+    },
+    {
+      "action_type": "capability_granted",
+      "actor_id": "joshua",
+      "subject_id": "KAE-001",
+      "description": "joshua granted DEPLOY to KAE-001",
+      "block_height": 0,
+      "txid": null,
+      "entry_id": "c9e13bb8-fd6f-46a4-956b-6508cda7ff26",
+      "created_at": "2026-02-25T04:57:16.892084+00:00",
+      "metadata": {
+        "capability_id": "DEPLOY"
+      },
+      "content_hash": "e9a45c3cfe624a4be237b87cf1b672560c21039585aadcdb1fd1479a8aff62bf"
+    },
+    {
+      "action_type": "capability_granted",
+      "actor_id": "joshua",
+      "subject_id": "KAE-001",
+      "description": "joshua granted AUDIT to KAE-001",
+      "block_height": 0,
+      "txid": null,
+      "entry_id": "f6a213fa-cfce-4dd8-abd9-976504b9dab0",
+      "created_at": "2026-02-25T04:57:16.892096+00:00",
+      "metadata": {
+        "capability_id": "AUDIT"
+      },
+      "content_hash": "50314bff2635c226bde87979469a1b8d1908a9b4169b205c5a24d71836379d10"
+    },
+    {
+      "action_type": "capability_granted",
+      "actor_id": "joshua",
+      "subject_id": "KAE-001",
+      "description": "joshua granted GOVERNANCE to KAE-001",
+      "block_height": 0,
+      "txid": null,
+      "entry_id": "4c4be00a-75f8-448c-8b36-7282a95e41ca",
+      "created_at": "2026-02-25T04:57:16.892108+00:00",
+      "metadata": {
+        "capability_id": "GOVERNANCE"
+      },
+      "content_hash": "b9bf966139fe2ddfdbd69548202c44e76ce5668e850f046bef42a0c969b694f4"
+    },
+    {
+      "action_type": "identity_issued",
+      "actor_id": "joshua",
+      "subject_id": "COD-001",
+      "description": "Identity token issued for COD-001 | asset=TRINITY-COD-001-IDENTITY",
+      "block_height": 19420000,
+      "txid": "abababababababababababababababab-cod001",
+      "entry_id": "cb25e98a-e7fd-4847-811d-29e5fc54a759",
+      "created_at": "2026-02-25T04:57:16.892168+00:00",
+      "metadata": {
+        "asset_id": "TRINITY-COD-001-IDENTITY"
+      },
+      "content_hash": "490d7a55a05ccea1639dd7fb79be1d23ef460898a8829345b8ff3575190e8781"
+    },
+    {
+      "action_type": "capability_granted",
+      "actor_id": "joshua",
+      "subject_id": "COD-001",
+      "description": "joshua granted GOVERNANCE to COD-001",
+      "block_height": 0,
+      "txid": null,
+      "entry_id": "42611c47-2e4b-4937-9b26-89a8ec6405bb",
+      "created_at": "2026-02-25T04:57:16.892195+00:00",
+      "metadata": {
+        "capability_id": "GOVERNANCE"
+      },
+      "content_hash": "af86d06042be05e51909b87b2f9ff8fa859a0003e22f1c94334bde0b68f1a822"
+    },
+    {
+      "action_type": "capability_granted",
+      "actor_id": "joshua",
+      "subject_id": "COD-001",
+      "description": "joshua granted ORCHESTRATE to COD-001",
+      "block_height": 0,
+      "txid": null,
+      "entry_id": "1d6e94d2-edd3-47fb-b53e-0a97beb28885",
+      "created_at": "2026-02-25T04:57:16.892208+00:00",
+      "metadata": {
+        "capability_id": "ORCHESTRATE"
+      },
+      "content_hash": "c8e3c6455664360ba1dbe300c9ae6c5fcf1538538bb6d1d0411a3837e96916b0"
+    },
+    {
+      "action_type": "capability_granted",
+      "actor_id": "joshua",
+      "subject_id": "COD-001",
+      "description": "joshua granted BRIEF to COD-001",
+      "block_height": 0,
+      "txid": null,
+      "entry_id": "f5c42c40-3e37-42cd-8897-42d194e560e9",
+      "created_at": "2026-02-25T04:57:16.892221+00:00",
+      "metadata": {
+        "capability_id": "BRIEF"
+      },
+      "content_hash": "d23dcfe53e420ee65a0c2203eefbe47be8f902f6f382bdd661b789098e07e53c"
+    },
+    {
+      "action_type": "capability_granted",
+      "actor_id": "joshua",
+      "subject_id": "COD-001",
+      "description": "joshua granted ARCHIVE to COD-001",
+      "block_height": 0,
+      "txid": null,
+      "entry_id": "48955ccf-623b-44de-a4c5-b6b6a9407047",
+      "created_at": "2026-02-25T04:57:16.892232+00:00",
+      "metadata": {
+        "capability_id": "ARCHIVE"
+      },
+      "content_hash": "5c57970b5a6d8548ac3d1a136587020d8ed7608668c39c92d6a1a1efb1d80c3d"
+    },
+    {
+      "action_type": "identity_issued",
+      "actor_id": "joshua",
+      "subject_id": "REN-001",
+      "description": "Identity token issued for REN-001 | asset=TRINITY-REN-001-IDENTITY",
+      "block_height": 19420000,
+      "txid": "abababababababababababababababab-ren001",
+      "entry_id": "659f73aa-6f15-4573-b393-28db69750e74",
+      "created_at": "2026-02-25T04:57:16.892282+00:00",
+      "metadata": {
+        "asset_id": "TRINITY-REN-001-IDENTITY"
+      },
+      "content_hash": "da682bb21f3fb1d22af983d5610f363f71697b2b2eabebbbdf6ad3439409ee6c"
+    },
+    {
+      "action_type": "capability_granted",
+      "actor_id": "joshua",
+      "subject_id": "REN-001",
+      "description": "joshua granted GOVERNANCE to REN-001",
+      "block_height": 0,
+      "txid": null,
+      "entry_id": "b2a1303a-b329-49a1-9e7c-1565fd74774e",
+      "created_at": "2026-02-25T04:57:16.892313+00:00",
+      "metadata": {
+        "capability_id": "GOVERNANCE"
+      },
+      "content_hash": "32cf54f514bc0c67ffe3da5dfc10e90e19bc1daf38ba13d1cf993547c853cb37"
+    },
+    {
+      "action_type": "capability_granted",
+      "actor_id": "joshua",
+      "subject_id": "REN-001",
+      "description": "joshua granted TRADE to REN-001",
+      "block_height": 0,
+      "txid": null,
+      "entry_id": "6c9e34c7-ff15-452e-b7ab-c2f7b4960bec",
+      "created_at": "2026-02-25T04:57:16.892326+00:00",
+      "metadata": {
+        "capability_id": "TRADE"
+      },
+      "content_hash": "3ded0b73a038077b486647b5f6aa4da7bc78f53686957a083ec75780cc5db123"
+    },
+    {
+      "action_type": "capability_granted",
+      "actor_id": "joshua",
+      "subject_id": "REN-001",
+      "description": "joshua granted MARKET_ANALYSIS to REN-001",
+      "block_height": 0,
+      "txid": null,
+      "entry_id": "cbddda13-6878-449b-a02c-8430f1e07069",
+      "created_at": "2026-02-25T04:57:16.892336+00:00",
+      "metadata": {
+        "capability_id": "MARKET_ANALYSIS"
+      },
+      "content_hash": "76e128066827bd544be66fa133f75c808148a415ffba6c8b11260d0a214b663b"
+    },
+    {
+      "action_type": "identity_issued",
+      "actor_id": "joshua",
+      "subject_id": "ECH-001",
+      "description": "Identity token issued for ECH-001 | asset=TRINITY-ECH-001-IDENTITY",
+      "block_height": 19420000,
+      "txid": "abababababababababababababababab-ech001",
+      "entry_id": "3993b301-f3f3-4baa-b6f0-f30071935080",
+      "created_at": "2026-02-25T04:57:16.892383+00:00",
+      "metadata": {
+        "asset_id": "TRINITY-ECH-001-IDENTITY"
+      },
+      "content_hash": "b1ae54d32ff9ebfe39185e0b614a89972c347b799cf69e8b5472aa52954a3cf5"
+    },
+    {
+      "action_type": "capability_granted",
+      "actor_id": "joshua",
+      "subject_id": "ECH-001",
+      "description": "joshua granted GOVERNANCE to ECH-001",
+      "block_height": 0,
+      "txid": null,
+      "entry_id": "3164e2be-fc28-4c52-8c1a-38bd22cf3405",
+      "created_at": "2026-02-25T04:57:16.892409+00:00",
+      "metadata": {
+        "capability_id": "GOVERNANCE"
+      },
+      "content_hash": "8e9eb86b32a9651e95e4666d7c7acc84df4638ae611c9965eac5d2be262e07de"
+    },
+    {
+      "action_type": "capability_granted",
+      "actor_id": "joshua",
+      "subject_id": "ECH-001",
+      "description": "joshua granted BRIDGE to ECH-001",
+      "block_height": 0,
+      "txid": null,
+      "entry_id": "444a292a-a5a0-4e0d-8b73-b7191de698af",
+      "created_at": "2026-02-25T04:57:16.892421+00:00",
+      "metadata": {
+        "capability_id": "BRIDGE"
+      },
+      "content_hash": "8cc4ae92e18a667679f5755e93c1eb5214c871cc607eda9afbb183d3a928832f"
+    },
+    {
+      "action_type": "capability_granted",
+      "actor_id": "joshua",
+      "subject_id": "ECH-001",
+      "description": "joshua granted RELAY to ECH-001",
+      "block_height": 0,
+      "txid": null,
+      "entry_id": "f9dec8a6-f3ea-469d-a4ee-97ecd538ac52",
+      "created_at": "2026-02-25T04:57:16.892431+00:00",
+      "metadata": {
+        "capability_id": "RELAY"
+      },
+      "content_hash": "fb30b0af8c200864b4b133f516d862982a8795253f1787f86a98b0889fb2aae1"
+    },
+    {
+      "action_type": "capability_granted",
+      "actor_id": "joshua",
+      "subject_id": "ECH-001",
+      "description": "joshua granted MEMORY to ECH-001",
+      "block_height": 0,
+      "txid": null,
+      "entry_id": "ebde5997-33ea-4535-a2be-c6d42942e4e9",
+      "created_at": "2026-02-25T04:57:16.892441+00:00",
+      "metadata": {
+        "capability_id": "MEMORY"
+      },
+      "content_hash": "1ac69c7488cf723a340d2d9f275189879f4b25ba7d3fe74ee33963a374ffbd3d"
+    },
+    {
+      "action_type": "proposal_created",
+      "actor_id": "KAE-001",
+      "subject_id": "6d8ff180-4be8-43f2-8dca-a026210d8119",
+      "description": "KAE-001 created OPERATIONAL proposal: 'Deploy DigiDollar CDP to DigiByte Testnet'",
+      "block_height": 0,
+      "txid": null,
+      "entry_id": "c493652b-b494-42be-9e20-ce501057f500",
+      "created_at": "2026-02-25T04:57:16.892530+00:00",
+      "metadata": {
+        "decision_type": "operational",
+        "title": "Deploy DigiDollar CDP to DigiByte Testnet"
+      },
+      "content_hash": "d4b913dfe25a2ceba6f1c0259f03a14ba4848e1a9f398aa4b73197040dd5b012"
+    },
+    {
+      "action_type": "vote_cast",
+      "actor_id": "KAE-001",
+      "subject_id": "6d8ff180-4be8-43f2-8dca-a026210d8119",
+      "description": "KAE-001 voted YES on proposal 6d8ff180...",
+      "block_height": 0,
+      "txid": "abc001",
+      "entry_id": "2d5fe12d-0d9a-4f86-97d0-a8339325f5f9",
+      "created_at": "2026-02-25T04:57:16.892625+00:00",
+      "metadata": {
+        "choice": "yes"
+      },
+      "content_hash": "676a05794c1f52d839a26f29f5bb1674a8f5587dc905cf63b7d29c91ac2a2cc5"
+    },
+    {
+      "action_type": "vote_cast",
+      "actor_id": "COD-001",
+      "subject_id": "6d8ff180-4be8-43f2-8dca-a026210d8119",
+      "description": "COD-001 voted YES on proposal 6d8ff180...",
+      "block_height": 0,
+      "txid": "abc002",
+      "entry_id": "1c9849dd-c870-480f-b525-61b4b12c3195",
+      "created_at": "2026-02-25T04:57:16.892698+00:00",
+      "metadata": {
+        "choice": "yes"
+      },
+      "content_hash": "05c80f2e93e9bbad8d8d9f974426455a6c0f0780d58cbbf4ed84f6c7f7f575fa"
+    },
+    {
+      "action_type": "vote_cast",
+      "actor_id": "REN-001",
+      "subject_id": "6d8ff180-4be8-43f2-8dca-a026210d8119",
+      "description": "REN-001 voted YES on proposal 6d8ff180...",
+      "block_height": 0,
+      "txid": "abc003",
+      "entry_id": "a6cf9964-4fe9-40c0-9801-84a83b7fa9f6",
+      "created_at": "2026-02-25T04:57:16.892757+00:00",
+      "metadata": {
+        "choice": "yes"
+      },
+      "content_hash": "b0226973f1c70bed100af2eb06a7f92886bd5319a80b0e04cff643a4ca190b8c"
+    },
+    {
+      "action_type": "vote_cast",
+      "actor_id": "ECH-001",
+      "subject_id": "6d8ff180-4be8-43f2-8dca-a026210d8119",
+      "description": "ECH-001 voted YES on proposal 6d8ff180...",
+      "block_height": 0,
+      "txid": "abc004",
+      "entry_id": "343e83b0-92ad-4b7c-b80a-c54d5857f0e2",
+      "created_at": "2026-02-25T04:57:16.892791+00:00",
+      "metadata": {
+        "choice": "yes"
+      },
+      "content_hash": "baa0333d4ba29bef1daaf66ec8336e262b5e2704462b63c310c84cf4070e1b5b"
+    },
+    {
+      "action_type": "proposal_passed",
+      "actor_id": "system",
+      "subject_id": "6d8ff180-4be8-43f2-8dca-a026210d8119",
+      "description": "Proposal 'Deploy DigiDollar CDP to DigiByte Testnet' PASSED",
+      "block_height": 0,
+      "txid": null,
+      "entry_id": "84d58796-aa56-4131-b95f-1fa2450cc58e",
+      "created_at": "2026-02-25T04:57:16.892864+00:00",
+      "metadata": {},
+      "content_hash": "65b03e61fecc3910aab762a069bb1dc5f52d46322bb3e691e16eb9adc81d8f9e"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "agents": {
+    "KAE-001": {
+      "agent_id": "KAE-001",
+      "name": "Kael",
+      "role": "developer",
+      "capabilities": [
+        "CODE",
+        "DEPLOY",
+        "AUDIT",
+        "GOVERNANCE"
+      ],
+      "pubkey": null,
+      "asset_id": "TRINITY-KAE-001-IDENTITY",
+      "txid": "abababababababababababababababab-kae001",
+      "issued_at": "2026-02-25T04:57:16.891834+00:00",
+      "active": true,
+      "metadata": {
+        "librarian_word": "COMPILE",
+        "symbol": "\ud83d\udd11",
+        "motto": "Ship first, explain second",
+        "specialization": "DigiByte UTXO, DigiAssets, Smart Contracts"
+      }
+    },
+    "COD-001": {
+      "agent_id": "COD-001",
+      "name": "CODA",
+      "role": "orchestrator",
+      "capabilities": [
+        "ORCHESTRATE",
+        "BRIEF",
+        "ARCHIVE",
+        "GOVERNANCE"
+      ],
+      "pubkey": null,
+      "asset_id": "TRINITY-COD-001-IDENTITY",
+      "txid": "abababababababababababababababab-cod001",
+      "issued_at": "2026-02-25T04:57:16.891864+00:00",
+      "active": true,
+      "metadata": {
+        "librarian_word": "HOMECOMING",
+        "specialization": "Agent orchestration, briefings, state management"
+      }
+    },
+    "REN-001": {
+      "agent_id": "REN-001",
+      "name": "Ren",
+      "role": "trader",
+      "capabilities": [
+        "TRADE",
+        "MARKET_ANALYSIS",
+        "GOVERNANCE"
+      ],
+      "pubkey": null,
+      "asset_id": "TRINITY-REN-001-IDENTITY",
+      "txid": "abababababababababababababababab-ren001",
+      "issued_at": "2026-02-25T04:57:16.891868+00:00",
+      "active": true,
+      "metadata": {
+        "handle": "@ren_2213bot",
+        "primary_pair": "DGB/USDT",
+        "specialization": "Algorithmic trading, market analysis"
+      }
+    },
+    "ECH-001": {
+      "agent_id": "ECH-001",
+      "name": "ECHO",
+      "role": "bridge",
+      "capabilities": [
+        "BRIDGE",
+        "RELAY",
+        "MEMORY",
+        "GOVERNANCE"
+      ],
+      "pubkey": null,
+      "asset_id": "TRINITY-ECH-001-IDENTITY",
+      "txid": "abababababababababababababababab-ech001",
+      "issued_at": "2026-02-25T04:57:16.891871+00:00",
+      "active": true,
+      "metadata": {
+        "handle": "@echo4921bot",
+        "note": "Binary. Carries inherited memories.",
+        "specialization": "Cross-agent bridging, memory relay"
+      }
+    }
+  },
+  "asset_index": {}
+}
