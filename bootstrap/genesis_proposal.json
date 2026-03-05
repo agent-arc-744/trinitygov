@@ -36,6 +36,9 @@
   },
   "asset_id": null,
   "execution_txid": null,
-  "joshua_signed": false,
-  "metadata": {}
+  "joshua_signed": true,
+  "metadata": {
+    "joshua_signed_at": "2026-03-05T21:09:23.733810+00:00",
+    "bootstrap_complete": true
+  }
 }
