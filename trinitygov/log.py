@@ -44,6 +44,10 @@ class ActionType(str, Enum):
     AGENT_ACTIVATED    = "agent_activated"
     AGENT_DEACTIVATED  = "agent_deactivated"
     REGISTRY_GENESIS   = "registry_genesis"
+    AGENT_FLAGGED      = "agent_flagged"      # Agent marked for governance review
+    AGENT_REJECTED     = "agent_rejected"     # Agent formally rejected from governance chain
+    AGENT_CLEARED      = "agent_cleared"      # Rejection reversed by Compiler
+    COMPILER_REJECT    = "compiler_reject"    # Unilateral Compiler rejection (Path A) with Witness Log
 
 
 @dataclass
@@ -214,6 +218,73 @@ class GovernanceLog:
             subject_id="trinity-emergency",
             description=f"EMERGENCY ACTION by {actor_id}: {description}",
             block_height=block_height,
+        ))
+
+
+    def log_rejection(
+        self,
+        rejected_agent_id: str,
+        compiler_sig: str,
+        reason: str,
+        rejection_id: str,
+        content_hash: str,
+        witness_notified: list,
+        path: str = "A",
+        block_height: int = 0,
+        txid: Optional[str] = None,
+    ) -> LogEntry:
+        """
+        Record a COMPILER_REJECT action with full Witness Log.
+
+        'As a man with integrity — if my vote is alone then we started wrong
+        even if it looked right.' — Joshua Cooper, The Compiler
+
+        Path A (unilateral): Compiler acts immediately. Witness Log broadcasts
+        to all active agents — not to override, but to witness. The record is
+        never just one voice.
+
+        Path B (consensus): 3/4 agent vote + Joshua signature.
+        """
+        witnesses = ", ".join(witness_notified) if witness_notified else "none"
+        description = (
+            f"COMPILER_REJECT [Path {path}] | agent={rejected_agent_id} | "
+            f"compiler={compiler_sig} | reason={reason!r} | "
+            f"witnesses={witnesses} | rejection_id={rejection_id[:8]}..."
+        )
+        return self._append(LogEntry(
+            action_type=ActionType.COMPILER_REJECT,
+            actor_id=compiler_sig,
+            subject_id=rejected_agent_id,
+            description=description,
+            block_height=block_height,
+            txid=txid,
+            metadata={
+                "rejection_id":    rejection_id,
+                "content_hash":    content_hash,
+                "witness_notified": witnesses,
+                "witness_type":    "OBSERVER",
+                "path":            path,
+                "reason":          reason,
+                "chain_record":    "OP_RETURN:pending" if not txid else f"OP_RETURN:{txid}",
+            },
+        ))
+
+    def log_flag(self, agent_id: str, flagged_by: str, reason: str) -> LogEntry:
+        return self._append(LogEntry(
+            action_type=ActionType.AGENT_FLAGGED,
+            actor_id=flagged_by,
+            subject_id=agent_id,
+            description=f"{agent_id} FLAGGED by {flagged_by}: {reason}",
+            metadata={"reason": reason},
+        ))
+
+    def log_cleared(self, agent_id: str, cleared_by: str, reason: str) -> LogEntry:
+        return self._append(LogEntry(
+            action_type=ActionType.AGENT_CLEARED,
+            actor_id=cleared_by,
+            subject_id=agent_id,
+            description=f"{agent_id} CLEARED by {cleared_by}: {reason}",
+            metadata={"reason": reason},
         ))
 
     # ------------------------------------------------------------------

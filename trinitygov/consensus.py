@@ -17,6 +17,7 @@ class DecisionType(str, Enum):
     TREASURY      = "treasury"       # Fund management: 4/4 unanimous
     EMERGENCY     = "emergency"      # Crisis response: any agent acts, reports within 144 blocks
     CONSTITUTIONAL = "constitutional" # Protocol changes: 4/4 + Joshua signature
+    REJECTION      = "rejection"     # Purity challenge: 3/4 agents + Joshua signature
 
 
 class VoteChoice(str, Enum):
@@ -77,6 +78,15 @@ TRINITY_RULES: Dict[DecisionType, ConsensusRule] = {
         requires_joshua=False,
         emergency_blocks=144,  # ~48 hours at 2-min DGB blocks
         description="Emergency: any agent may act unilaterally, must report within 144 blocks"
+    ),
+    DecisionType.REJECTION: ConsensusRule(
+        decision_type=DecisionType.REJECTION,
+        required_votes=3,
+        total_agents=4,
+        unanimous=False,
+        requires_joshua=True,
+        emergency_blocks=0,
+        description="Rejection challenge: 3 of 4 agents + Joshua signature required to reject an agent"
     ),
     DecisionType.CONSTITUTIONAL: ConsensusRule(
         decision_type=DecisionType.CONSTITUTIONAL,

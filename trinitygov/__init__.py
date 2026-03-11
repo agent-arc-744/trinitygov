@@ -81,3 +81,5 @@ __all__ = [
     "TrinityGovError", "AgentNotFoundError", "CapabilityNotGrantedError",
     "ProposalNotFoundError", "VotingClosedError",
 ]
+
+from .rejection import CompilerReject, RejectionRecord

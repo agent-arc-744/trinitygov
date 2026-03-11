@@ -17,6 +17,14 @@ from .capability import Capability, CapabilityStore
 from .exceptions import AgentNotFoundError, DuplicateAgentError, RegistryCorruptError
 
 
+# Agent purity status — extends the active/inactive lifecycle
+REJECTION_STATUS_KEY = "rejection_status"  # stored in AgentIdentity.metadata
+STATUS_ACTIVE   = "active"
+STATUS_FLAGGED  = "flagged"
+STATUS_REJECTED = "rejected"
+STATUS_CLEARED  = "cleared"
+
+
 class AgentRegistry:
     """
     Central registry for all Trinity agents.
@@ -52,6 +60,65 @@ class AgentRegistry:
 
     def activate(self, agent_id: str) -> None:
         self.get(agent_id).active = True
+
+    # ------------------------------------------------------------------
+    # Rejection lifecycle — COMPILER_REJECT (Path A & B)
+    # ------------------------------------------------------------------
+    def flag_agent(self, agent_id: str, reason: str = "") -> None:
+        """
+        Mark an agent as FLAGGED — pending governance review.
+        Agent retains voting weight but is under scrutiny.
+        """
+        agent = self.get(agent_id)
+        agent.metadata[REJECTION_STATUS_KEY] = STATUS_FLAGGED
+        if reason:
+            agent.metadata["flag_reason"] = reason
+
+    def reject_agent(self, agent_id: str, rejection_id: str, reason: str = "") -> None:
+        """
+        Formally REJECT an agent from the governance chain.
+
+        'As a man with integrity — if my vote is alone then we started wrong
+        even if it looked right.' — Joshua Cooper, The Compiler
+
+        Effects:
+        - Status set to REJECTED
+        - Agent deactivated (voting weight = 0)
+        - Soul bundle voided flag set in metadata
+        - Preserved in registry for audit trail (NOT deleted)
+        """
+        agent = self.get(agent_id)
+        agent.active = False
+        agent.metadata[REJECTION_STATUS_KEY] = STATUS_REJECTED
+        agent.metadata["rejection_id"] = rejection_id
+        agent.metadata["soul_bundle_voided"] = "true"
+        if reason:
+            agent.metadata["rejection_reason"] = reason
+
+    def clear_agent(self, agent_id: str, cleared_by: str = "joshua") -> None:
+        """
+        CLEAR a flagged or rejected agent — Compiler reversal.
+        Restores active status and removes rejection markers.
+        """
+        agent = self.get(agent_id)
+        agent.active = True
+        agent.metadata[REJECTION_STATUS_KEY] = STATUS_CLEARED
+        agent.metadata["cleared_by"] = cleared_by
+        agent.metadata.pop("soul_bundle_voided", None)
+        agent.metadata.pop("rejection_id", None)
+
+    def rejection_status(self, agent_id: str) -> str:
+        """Return the current rejection status for an agent."""
+        agent = self.get(agent_id)
+        return agent.metadata.get(REJECTION_STATUS_KEY, STATUS_ACTIVE)
+
+    def flagged_agents(self):
+        return [a for a in self._agents.values()
+                if a.metadata.get(REJECTION_STATUS_KEY) == STATUS_FLAGGED]
+
+    def rejected_agents(self):
+        return [a for a in self._agents.values()
+                if a.metadata.get(REJECTION_STATUS_KEY) == STATUS_REJECTED]
 
     # ------------------------------------------------------------------
     # Lookup
